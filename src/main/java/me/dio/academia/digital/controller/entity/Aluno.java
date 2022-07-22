@@ -25,7 +25,7 @@ public class Aluno {
 
   private String nome;
 
-  @Column(unique = true)
+  @Column(unique = true) //indica campo unico
   private String cpf;
 
   private String bairro;
@@ -35,5 +35,4 @@ public class Aluno {
   @OneToMany(mappedBy = "aluno", cascade = CascadeType.REMOVE , fetch = FetchType.LAZY)
   @JsonIgnore
   private List<AvaliacaoFisica> avaliacoes = new ArrayList<>();
-
 }
